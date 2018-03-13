@@ -1,2 +1,2 @@
-# honorarios
-Webapp generación de planilla de liquidación de honorarios
+# Honorarios
+Webapp de generación de planilla de liquidación de honorarios
