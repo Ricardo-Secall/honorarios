@@ -14,5 +14,8 @@ CodeIGniter:
 		date_default_timezone_set('America/Caracas');
 	autoload.php
 		$autoload['libraries'] =  array('database', 'email', 'session','grocery_CRUD');
+	root 
+		composer require phpoffice/phpspreadsheet
+		composer require dompdf/dompdf
 		
 		
