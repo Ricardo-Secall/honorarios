@@ -10,6 +10,7 @@ class Examples extends CI_Controller {
 		$this->load->helper('url');
 
 		$this->load->library('grocery_CRUD');
+
 	}
 
 	public function _example_output($output = null)
@@ -34,7 +35,13 @@ class Examples extends CI_Controller {
 		try{
 			$crud = new grocery_CRUD();
 
-			$crud->set_theme('datatables');
+					$crud->set_theme('bootstrap');
+		$crud->set_language("spanish");
+		$crud->avante_options(array('show_operation_bar' => true,'show_operation_bar2' => true));// Avante modificado para pasar 
+		$crud->unset_jquery();//$crud->unset_jquery_ui();
+$crud->unset_bootstrap();
+
+			//$crud->set_theme('datatables');
 			$crud->set_table('offices');
 			$crud->set_subject('Office');
 			$crud->required_fields('city');

@@ -1,0 +1,60 @@
+#cole-module.navbar-default .navbar-brand {
+    color: rgba(255, 255, 255, 1);
+}
+
+#cole-module .navbar-brand {
+    font-size: 48px;
+    font-weight: normal;
+}
+
+#cole-module li{
+    font-size:16px ;
+}
+
+#cole-module .navbar-nav>li>.dropdown-menu {
+background-color: #577eb5;
+    margin-top: 5px;
+}
+
+#cole-module ul.dropdown-menu > li > a{
+    color:white !important;
+}
+#cole-module.navbar-default {
+    font-size: 14px;
+    background-color: rgba(87, 126, 181, 1);
+    border-width: 0px;
+    border-radius: 0px;
+    margin-bottom:0px;
+}
+#cole-module.navbar-default .navbar-nav>li>a {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(87, 126, 181, 1);
+    font-weight: normal;
+    height: 48px;
+    padding-top: 20px;
+}
+#cole-module.navbar-default .navbar-nav>li>a:hover,
+#cole-module.navbar-default .navbar-nav>li>a:focus {
+    color: yellowgreen;
+    background-color: rgba(87, 126, 181, 1);
+}
+#cole-module.navbar-default .navbar-nav>.active>a,
+#cole-module.navbar-default .navbar-nav>.active>a:hover,
+#cole-module.navbar-default .navbar-nav>.active>a:focus {
+    color: yellow;
+    background-color: rgba(87, 126, 181, 1);
+}
+#cole-module.navbar-default .navbar-toggle {
+    border-color: #577eb5;
+}
+#cole-module.navbar-default .navbar-toggle:hover,
+#cole-module.navbar-default .navbar-toggle:focus {
+    background-color: #577eb5;
+}
+#cole-module.navbar-default .navbar-toggle .icon-bar {
+    background-color: #577eb5;
+}
+#cole-module.navbar-default .navbar-toggle:hover .icon-bar,
+#cole-module.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #577eb5;
+}
