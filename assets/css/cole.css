@@ -1,7 +1,11 @@
 /* Colores Base */
-/* Azul COLE #577eb5  */
+/* Azul COLE #2E3369  */
 /*  Verde COLE yellowgreen  */
 /* Azul anterior (desuso) #8aa8d1*/
+/*
+CMMMM PAtrones
+Titulo = #2E3369; 
+Subtiulo = #8D96B2; yellowgreen*/
 
 
 
@@ -10,13 +14,27 @@
 /* ficha */
 body  {
 font-family: 'Lato', sans-serif;/*"Helvetica Neue", Helvetica, Arial, sans-serif;/*'Montserrat', sans-serif;*/
-  color:#6a6a6a; /*#577eb5; /*  rgba(128, 128, 128, 0.81); #555;*/
-  background-color: #eee; /* whitesmoke;  #fcfcfc;background-color:whitesmoke; */
+  color:#6a6a6a; /*#2E3369; /*  rgba(128, 128, 128, 0.81); #555;*/
+  background-color: white; /* whitesmoke;  #eee;background-color:whitesmoke; */
   font-weight:normal;
   text-align: left;
   font-size:16px;
   }
+
+a {
+    color: #8D96B2;
+    text-decoration: none;
+}
   
+
+
+a:hover {
+  color: #2E3369;
+  text-decoration: underline;
+  font-weight: bold;
+ }
+ 
+
   .fade-scale {
   transform: scale(0);
   opacity: 0;
@@ -40,7 +58,7 @@ font-family: 'Lato', sans-serif;/*"Helvetica Neue", Helvetica, Arial, sans-serif
 
 .color-header-1{
     color: white;
-    background-color: #577eb5 !important ;
+    background-color: #2E3369 !important ;
   }
 
   .color-header-2{
@@ -50,11 +68,11 @@ font-family: 'Lato', sans-serif;/*"Helvetica Neue", Helvetica, Arial, sans-serif
 
 
 .cole-font-color{
-color:#577eb5 ;
+color:#2E3369 ;
 }
 
 .cole-font-color-1{
-color:#577eb5 ;
+color:#2E3369 ;
 }
 
 .cole-font-color-2{
@@ -96,7 +114,7 @@ background-color: white;
 }
 
 .avante-fg {
-  color: #577eb5 ;
+  color: # ;
 }
 
 .avante-panel{
@@ -106,7 +124,7 @@ background-color: white;
 }
 
 .page-header{
-  color: #577eb5;
+  color: #2E3369;
       border-bottom: 1px solid lightgray;
       xmargin: 20px 0 20px;
 }
@@ -123,11 +141,11 @@ background-color: white;
   font-weight: bold;
 /*font-family: 'Montserrat', sans-serif;*/
 letter-spacing:2px;
-color: #577eb5;
+color: #2E3369;
 }
 
 .avante-subtitulo{
-  color: yellowgreen;
+  color: #8D96B2; /*yellowgreen*/
   Xfont-size: large;
 }
 
@@ -142,7 +160,7 @@ color: #577eb5;
 .avante-idue{
   padding-top: 35px;
   text-align: left;
-  background-color:#577eb5 ;
+  background-color:#2E3369 ;
 }
 
 .seccion {
@@ -169,11 +187,11 @@ color: #577eb5;
 ul.ui-autocomplete.ui-menu {
   border: 1px solid gray;
   background-color: #fff;
-  color: #577eb5;
+  color: #2E3369;
 }
 
 ul.ui-autocomplete.ui-menu > li:hover, ul.ui-autocomplete.ui-menu > li:hover > a {
-  background-color: #577eb5;
+  background-color: #2E3369;
   color: #fff;
 }
 
@@ -218,7 +236,7 @@ input{
 background-color:white;
 }
 label {
-  color: #577eb5;
+  color: #2E3369;
   font-weight:normal;
 }
 /*********************************************/
@@ -326,7 +344,7 @@ li.dropdown.open > a {
   background-color: white;
 }
 .ColeTableTitulo{
-  background-color:#577eb5 ;
+  background-color:#2E3369 ;
 }
 .ColeTableContenido{
   height:25px;border-bottom: 1px solid #ddd;
@@ -357,7 +375,7 @@ li.dropdown.open > a {
       display: block;
     margin-top: 0px;
      margin-bottom: 0px;
-    color: #577eb5;
+    color: #2E3369;
     font-size: 10px;
     margin-left: 5px;
 }
@@ -440,19 +458,19 @@ box-shadow: 0 1px 3px 0 #BFBFBF;
 #custom-bootstrap-menu.navbar-default .navbar-brand {
     xcolor: lime;
     xcolor:yellowgreen;
-    color:#577eb5;
+    color:#2E3369;
 }
 
 
 #custom-bootstrap-menu.navbar-default {
    font-size: 18px; /*chequeado*/
     font-weight:bold;
-    background-color: #fff;/*#577eb5;*/
+    background-color: #fff;/*#2E3369;*/
       box-shadow: 1px 1px 8px rgba(102,102,102,.3);
 }
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a {
-    color: #577eb5;
-    background-color: #fff;/*#577eb5;*/
+    color: #2E3369;
+    background-color: #fff;/*#2E3369;*/
 }
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
@@ -462,22 +480,22 @@ box-shadow: 0 1px 3px 0 #BFBFBF;
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
-    color: #577eb5;
+    color: #2E3369;
     background-color: #ff;
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle {
-    xborder-color: #577eb5;
+    xborder-color: #2E3369;
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
 #custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
-    background-color: #577eb5;
+    background-color: #2E3369;
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
     background-color: lightgray;
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
 #custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
-    background-color: #577eb5;
+    background-color: #2E3369;
 }
 
 /* fin */
@@ -496,8 +514,8 @@ resize: none;overflow:hidden;xwidth:540px;height:100px;padding:10px;border-radiu
 }
     /* color A = 95b3d7 */
      /*  color B =A4C2F4*/
-  /*  color B =577eb5*/
-   /*  color B =577eb5*/
+  /*  color B =2E3369*/
+   /*  color B =2E3369*/
 
 .contact-group {
   border-bottom-color:lightgray;
@@ -522,7 +540,7 @@ margin-top:0px;/**vital para que el poup menu funciones de lista de contactos*/
    }
     .contenidos{
       font-weight: bold;
-    background-color: #577eb5;
+    background-color: #2E3369;
     color:white;
      font-size: 12px;
     }
@@ -548,23 +566,12 @@ color:lightcyan;
 }
 .btn-primary {
     color: #fff;
-    background-color: #577eb5 ;
-    border-color: #577eb5 ;
+    background-color: #8D96B2 ;
+    border-color: #8D96B2 ;
 }
 
 
-a {
-    color: #577eb5;
-    text-decoration: none;
-  cursor: pointer;
-  font-weight: bold;
-}
 
-a:hover {
-  color: #577eb5;
-  text-decoration: underline;
-  font-weight: bold;
- }
 
 .Xbtn{
   font-size: 18px;
@@ -711,7 +718,7 @@ a:hover {
 .cole-range-dates{
 Xbackground-color: transparent;
 border:none;
-color: #577eb5;
+color: #2E3369;
     font-size: 10px; /* coLE-HELP-BLOCK*/
 }
 
@@ -843,7 +850,7 @@ width: 100%;
     Xmargin-bottom: 5px;
 }
 .mui-textfield--float-label>input:not(:focus).mui--is-not-empty~label, .mui-textfield--float-label>input:not(:focus):not(:empty):not(.mui--is-empty):not(.mui--is-not-empty)~label, .mui-textfield--float-label>input:not(:focus)[value]:not([value=""]):not(.mui--is-empty):not(.mui--is-not-empty)~label, .mui-textfield--float-label>textarea:not(:focus).mui--is-not-empty~label, .mui-textfield--float-label>textarea:not(:focus):not(:empty):not(.mui--is-empty):not(.mui--is-not-empty)~label, .mui-textfield--float-label>textarea:not(:focus)[value]:not([value=""]):not(.mui--is-empty):not(.mui--is-not-empty)~label{
-      color: #577eb5;
+      color: #2E3369;
     }
 
 .mui-textfield>input, .mui-textfield>textarea {
