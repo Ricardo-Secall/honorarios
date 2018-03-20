@@ -21,6 +21,7 @@ class MY_Controller extends CI_Controller {
 
 	public function login_check()
 	{
+		
 		if ($this->access != "*") 
 		{
 			// here we check the role of the user

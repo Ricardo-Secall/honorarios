@@ -13,25 +13,34 @@ Subtiulo = #8D96B2; yellowgreen*/
 
 /* ficha */
 body  {
-font-family: 'Lato', sans-serif;/*"Helvetica Neue", Helvetica, Arial, sans-serif;/*'Montserrat', sans-serif;*/
+sfont-family: 'Lato', sans-serif;/*"Helvetica Neue", Helvetica, Arial, sans-serif;/*'Montserrat', sans-serif;*/
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color:#6a6a6a; /*#2E3369; /*  rgba(128, 128, 128, 0.81); #555;*/
   background-color: white; /* whitesmoke;  #eee;background-color:whitesmoke; */
   font-weight:normal;
   text-align: left;
-  font-size:16px;
+  font-size:14px;
   }
+
+ .control-label{   
+  color: #8d96b2 !important;
+    }
 
 a {
     color: #8D96B2;
     text-decoration: none;
 }
   
-
+th{
+      background-color: #8D96B2;
+      color: white;
+      font-weight: normal;
+}
 
 a:hover {
   color: #2E3369;
   text-decoration: underline;
-  font-weight: bold;
+  xfont-weight: bold;
  }
  
 
@@ -41,6 +50,10 @@ a:hover {
   -webkit-transition: all .25s linear;
   -o-transition: all .25s linear;
   transition: all .25s linear;
+}
+
+.form-control{
+  border-radius:0px;
 }
 
 .fade-scale.in {
@@ -265,9 +278,7 @@ border-radius:4px;
 #cliente{
 font-size:20px;padding-top:20px; color:#ffffff;xmargin-bottom:20px;font-weight:bold;  letter-spacing:2px;
 }
-.form-control{
-  /*border-radius:90px;*/
-}
+
 
 .navbar-default {
   border-width: 0px;
@@ -450,54 +461,52 @@ h4,h1,h2,h3,h4,h5{
 font-size:14px;
 background-color:white;
 padding:10px;
-Xborder: 1px solid lightgray;
+border: 2px solid lightgray;
 border-radius:4px;
 box-shadow: 0 1px 3px 0 #BFBFBF;
 }
 /* Navigatino Bar */
-#custom-bootstrap-menu.navbar-default .navbar-brand {
-    xcolor: lime;
-    xcolor:yellowgreen;
-    color:#2E3369;
-}
-
-
-#custom-bootstrap-menu.navbar-default {
-   font-size: 18px; /*chequeado*/
+ #custom-bootstrap-menu.navbar-default .navbar-brand {
+    color: #2E3369;
+    font-size: 1.5em;
     font-weight:bold;
-    background-color: #fff;/*#2E3369;*/
-      box-shadow: 1px 1px 8px rgba(102,102,102,.3);
+}
+#custom-bootstrap-menu.navbar-default {
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 1);
+    xborder-bottom-width: 1px;
+    margin: 10px; 
 }
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a {
-    color: #2E3369;
-    background-color: #fff;/*#2E3369;*/
+    color: rgba(141, 150, 178, 1);
+    background-color: rgba(255, 255, 255, 1);
 }
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
-    color: yellowgreen;
-    background-color: #fff);
+    color: rgba(46, 51, 105, 1);
+    background-color: rgba(248, 248, 248, 0);
 }
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
-    color: #2E3369;
-    background-color: #ff;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(141, 150, 178, 1);
+    border-radius: 30px;
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle {
-    xborder-color: #2E3369;
+    border-color: #8d96b2;
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
 #custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
-    background-color: #2E3369;
+    background-color: #8d96b2;
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
-    background-color: lightgray;
+    background-color: #8d96b2;
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
 #custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
-    background-color: #2E3369;
+    background-color: #ffffff;
 }
-
 /* fin */
 
 /* Notifacionnes */

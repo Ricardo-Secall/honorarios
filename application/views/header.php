@@ -18,8 +18,11 @@
     <script src="<?php echo base_url(); ?>assets/js/bootstrap-datepicker/bootstrap-datepicker.es.min.js"></script>
 
     <?php 
+    
     if(isset($crud)){ 
+
     foreach($crud->css_files as $file): ?>
+
     <link type="text/css" rel="stylesheet" href="<?php echo $file; ?>" />
 <?php endforeach; ?>
 <?php foreach($crud->js_files as $file): ?>
