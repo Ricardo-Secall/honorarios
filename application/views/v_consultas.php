@@ -1,11 +1,18 @@
 <div class="container">
-    <div class="row">
-        <div class="col-sm-4">
-            <h1 class="avante-subtitulo">Consulta de Listados</h1>
-        </div>
-        <form class="form-horizontal mui-form">
-            <fieldset>
-                <div class="col-sm-2  scol-sm-offset-2">
+    <form class=" mui-form">
+        <fiedldset>
+            <div class="row">
+                <div class="col-sm-12">
+                    <ol class="breadcrumb">
+                        <li class="avante-titulo" href="#">Liquidación de Honorarios</li>
+                        <li class="avante-subtitulo active " href="#">Consultas</li>
+
+                    </ol>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2  cosl-sm-offset-4">
                     <div class="form-group">
                         <label class="control-label" for="selectbasic">Año</label>
 
@@ -15,7 +22,6 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-sm-1"></div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label class="control-label" for="s_mes">Mes</label>
@@ -32,19 +38,26 @@
                             <option value="10">Octubre</option>
                             <option value="11">Noviembre</option>
                             <option value="12">Diciembre</option>
-                        </select>
+                        </select>   
                     </div>
                 </div>
-            </fieldset>
-        </form>
-        
+                <div class="col-sm-1"  style="margin-top:2em"> 
+                    <div class="label label-warning ">versión 2</div>
+                </div>
+            </div>
 
-    </div>
-    <div class="row">
-<input type="text" id="cole-search" value="" style="display:none;">
-<?php echo $crud->output; ?>
-    
 
-        
+        </fieldset>
+    </form>
+
+
+</div>
+<div class=" container ">
+    <div class="row   ">
+        <div class="col-sm-12 mui-panel">
+          <input type="text" id="cole-search" value="" style="display:none;">
+        <?php echo $crud->output; ?>     
+        </div>
     </div>
+
 </div>

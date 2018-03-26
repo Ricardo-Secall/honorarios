@@ -5,7 +5,9 @@
 /*
 CMMMM PAtrones
 Titulo = #2E3369; 
-Subtiulo = #8D96B2; yellowgreen*/
+Subtiulo =  #8D96B2;
+grisclaro = #e0e0e0;
+ yellowgreen*/
 
 
 
@@ -22,7 +24,43 @@ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica N
   font-size:14px;
   }
 
- .control-label{   
+textarea{
+  border-color: #e0e0e0;
+  padding: 0.5em;
+  resize:none;
+}
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    xmargin: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: lightgray !important;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: lightgray !important;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: lightgray !important;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: lightgray !important;
+}
+
+.control-label{   
   color: #8d96b2 !important;
     }
 
@@ -30,7 +68,46 @@ a {
     color: #8D96B2;
     text-decoration: none;
 }
+
+::placeholder {
+    color: gray;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: gray;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: gray;
+}
+.color-1{
+  color:#2E3369;
+}
+
+.color-2{
+  color: #8D96B2;
+}
+
+.color-3{
+
+}
+
+
+.row{
+    margin-bottom: 0.5em;
+}
+.progress{
+    border-radius: 0px;
+}
   
+.breadcrumb {
+    padding: 0px;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: white; */
+    /* border-radius: 4px; */
+}
 th{
       background-color: #8D96B2;
       color: white;
@@ -39,7 +116,7 @@ th{
 
 a:hover {
   color: #2E3369;
-  text-decoration: underline;
+  text-decoration: none !important;
   xfont-weight: bold;
  }
  
@@ -157,10 +234,16 @@ letter-spacing:2px;
 color: #2E3369;
 }
 
+.avante-titulo{
+  color: #2E3369; /*yellowgreen*/
+  font-size: 2em;
+}
+
 .avante-subtitulo{
   color: #8D96B2; /*yellowgreen*/
-  Xfont-size: large;
+  font-size: 1.5em;
 }
+
 
 .avante-footer{
    min-height: 25px ;
@@ -468,14 +551,14 @@ box-shadow: 0 1px 3px 0 #BFBFBF;
 /* Navigatino Bar */
  #custom-bootstrap-menu.navbar-default .navbar-brand {
     color: #2E3369;
-    font-size: 1.5em;
-    font-weight:bold;
+    font-size: 2em;
+    Xfont-weight:200;
 }
 #custom-bootstrap-menu.navbar-default {
-    font-size: 16px;
+    Xfont-size: 16px;
     background-color: rgba(255, 255, 255, 1);
     xborder-bottom-width: 1px;
-    margin: 10px; 
+
 }
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a {
     color: rgba(141, 150, 178, 1);

@@ -102,17 +102,15 @@
                         }
                          // Ricardo ?>
                         <div class="header-tools" <?php echo $display ?>>
-                            <?php if(!$unset_add){?>
-
-                                <div class="floatL t5">
-                                <a class="btn btn-md btn-link search-button xt5" style="displacy:none">
-                                    <i class="fa fa-search"></i>
+                            <div class="floatL t5">
+                                <a class="btn btn-md btn-link search-button xt5" style="    text-decoration: none">
+                                    <i class="fa fa-search"></i> Buscar
                                     <input type="text" name="search" class="search-input" />
                                 </a>
-
+                            <?php if(!$unset_add){?>
                                     <a class="btn btn-md btn-link" href="<?php echo $add_url?>"><i class="fa fa-plus"></i> &nbsp; <?php //echo $this->l('list_add'); ?> <?php //echo $subject?></a>
-                                </div>
                             <?php } ?>
+                            </div>
                             <div class="floatR">
                                 <?php if(!$unset_export) { ?>
                                     <div class="btn btn-md btn-link t5 gc-export" data-url="<?php echo $export_url; ?>">

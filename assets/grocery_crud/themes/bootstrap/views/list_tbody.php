@@ -103,7 +103,7 @@
                                 }
 
                                 if (!$unset_read) { ?>
-                                    <a class="btn btn-default" href="<?php echo $row->read_url?>"><i class="fa fa-eye"></i> <?php echo $this->l('list_view')?></a>
+                                    <a class="btn btn-link" href="<?php echo $row->read_url?>"><i class="fa fa-eye"></i> <?php echo $this->l('list_view')?></a>
                                 <?php }
 
                                 if (!$unset_delete) { ?>
