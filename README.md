@@ -18,4 +18,15 @@ CodeIGniter:
 		composer require phpoffice/phpspreadsheet
 		composer require dompdf/dompdf
 		
-		
+# Honorarios
+Webapp de generación de planilla de liquidación de honorarios
+
+#Realese Notes
+
+
+#Roadmap
+	PRG Codeigniter
+
+#bugs
+	Cuanddo selecciona un archovo muy grande el error mostrado no es el correcto
+
