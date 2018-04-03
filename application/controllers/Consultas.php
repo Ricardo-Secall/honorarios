@@ -4,7 +4,7 @@
  * This controller can be accessed 
  * for Author group only
  */
-class Consultas extends MY_Controller {	
+class consultas extends MY_Controller {	
 
 	protected $access = array("Admin","Medicos"); 
 

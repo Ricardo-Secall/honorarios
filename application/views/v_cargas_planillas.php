@@ -11,22 +11,26 @@
         </div>
     </div>
     <br>    
-    <div class="row">
 
+    <div class="row">
+        <div class="col-sm-4 color-2 col-sm-offset-4 text-center" style="font-size: 1.5em">
+            Mes de Participación
+            <hr>  
+        </div>
+    </div>
+    <div class="row">
         <div class="col-sm-2  col-sm-offset-4">
             <div class="fodrm-group">
                 <label class="control-label" for="selectbasic">Año</label>
-
-                <select id="selectbasic" name="selectbasic" class="form-control">
+                <select id="anio" name="anio" class="form-control">
                     <option value="2018">2018</option>
-                    <option value="2017">2017</option>
                 </select>
             </div>
         </div>
         <div class="col-sm-2">
             <div class="fodrm-group">
                 <label class="control-label" for="s_mes">Mes</label>
-                <select id="s_mes" name="s_mes" class="form-control">
+                <select id="mes" name="mes" class="form-control">
                     <option value="1">Enero</option>
                     <option value="2">Febrero</option>
                     <option value="3">Marzo</option>
@@ -47,23 +51,24 @@
             <div class="label label-warning ">versión 2</div>
         </div>
     </div>
-    <?php echo form_open_multipart('cargas_planillas/upload','id="form1"');?>
+
+    <?php echo form_open_multipart('upload_file','id="form1"');?>
     <div class="row">
         <div class="col-sm-4 col-sm-offset-4 ">
-
             <div class="fileUpload btn btn-block btn-primary">
                 <span>Subir Planilla de Honorarios</span>
-                <input id="input_subir" type="file" class="upload" onchange="ready_to_upload();" name="userfile" />
+                <input id="input_subir" type="file" class="upload"  onchange="upload_file();" name="userfile" />
             </div>
 
-
+            <!--
             <div class=" myalert alert alert-danger text-center" style="display:none;margin-top:10px">
               <button type="button" class="close" data-dismiss="alert">×</button>
               <span id="error-upload"></span>
           </div>
+      -->
 
-      </div>
   </div>
+</div>
 
 </form>
 <div class="row hidden">
@@ -89,60 +94,143 @@
 <div class="row status " id="chk-proceso" style="display:none; " > <!-- Ckecklist -->
     <div class=" col-sm-4 col-sm-offset-5">
         <ul class="fa-ul color-2 f" style="font-size: 1.5">
-          <li><i class="subiendo fa-li fa  xfa-check-square"></i>Subiendo Archivo</li>
-          <li><i class="validando fa-li fa  xfa-spinner xfa-pulse"></i>Validando Estructura </li>
-          <li><i class="cargando fa-li fa  xfa-square"></i>Cargando Data</li>
+          <li style="font-size:1.5em" ><i class="subiendo fa-li fa  "></i>Subir Archivo</li>
+          <li style="font-size:1.5em" ><i class="validando fa-li fa  "></i>Validar Estructura </li>
+          <li style="font-size:1.5em" ><i class="cargando fa-li fa  "></i>Carga de Data</li>
           <li class="hidden"><i class="fa-li fa fa-close " style=""></i>List icons</li>
       </ul>
   </div>
 </div>
 
-<div class="row hidden">
-    <div class="col-sm-4 col-sm-offset-4">
-        <i style="color:orasnge" class="fa-4x fa fa-spinner fa-spin"></i>
-    </div>
+<div class="row myspin" style="display:none; " >
+    <div class="col-sm-4 text-center col-sm-offset-4">
+        <i style="color:orange" class="fa-4x fa fa-spinner fa-spin"></i>
+    </div> <!-- spiinner -->
 </div>
 
 </div>
 
-<div class=" container ">
+
+<div class="seccion_body container " style="display:none">
     <hr>
-    <div class="row hiddsen">
-        <div class="col-sm-4 mdui-textfield col-sm-offset-4">
-            <div style="font-size: 2em; text-align: center"><span class="color-1">Archivo:</span><span class="color-2 " style="margin-left: 4px">honoarios.xls</span></div>
+    <form id="form2" method="post" accept-charset="utf-8" action="genera_cartola">
 
-            <textarea rows="2" class="btn-block" placeholder="Observaciones"></textarea> 
+        <div class="row hiddsen">
+            <div class="col-sm-4 mdui-textfield col-sm-offset-4 ">
+                <input type="hidden" id="s_anio" name="s_anio" value="<?php echo($anio); ?>" />
+                <input type="hidden" id="s_mes" name="s_mes" value="<?php echo($mes); ?>" />
+                <span class="color-1 btn-block text-center" >Archivo</span>
+                <div>
+                    <input class="color-2 btn-block text-center" style=";font-size:1.5em;border-width:0px" readonly="true" id="archivo_base" type="text" name="archivo_base" value="" /></div>
 
+                    <textarea name="observaciones" rows="2" maxlength="400" class="btn-block" placeholder="Observaciones"></textarea> 
+
+                </div>
+            </div>
+
+            <div class="row">   
+                <div class="col-sm-2 col-sm-offset-4"> <button id="btn_genera" type="button" class="btn btn-md btn-block btn-primary">Generar Cartolas</button> </div>
+                <div class="col-sm-2">  <button id="btn_" type="button" class="btn btn-md btn-block btn-primary">Omitir Planilla</button> </div>
+            </div>
+        </form>
+        <br>
+        <div class="row   ">
+            <div class="col-sm-12 mui-panel">
+                <input type="text" id="cole-search" value="" style="display:none;">
+                <?php echo $crud->output; ?>     
+            </div>
         </div>
     </div>
 
-    <div class="row">   
-        <div class="col-sm-2 col-sm-offset-4"> <button type="button" class="btn btn-md btn-block btn-primary">Generar Cartolas</button> </div>
-        <div class="col-sm-2">  <button type="button" class="btn btn-md btn-block btn-primary">Omitir Planilla</button> </div>
-    </div>
+    <script type="text/javascript">
+    /* Procesos
+    1. upload_file (ajax)
+    2. valida_estructura save_temporary
+    3. carga_crud
+    4. Epera Confirmación
+    5.  GRaba (opcional Opservaciones)
 
-    <br>
-    <div class="row   ">
-        <div class="col-sm-12 mui-panel">
-            <input type="text" id="cole-search" value="" style="display:none;">
-            <?php echo $crud->output; ?>     
-        </div>
-    </div>
-</div>
-<script type="text/javascript">
-    $(document).ready( function() {
+
+    */
+
+    $(document).ready( function() { //Listenner
+
+        $("#anio").val($("#s_anio").val());
+        $("#mes").val($("#s_mes").val());
+
+        $(".fileUpload").click(function(){
+           // alert("kj");
+           $("#input_subir").val(""); // Importante para que reonozco un error 2 veces seguidads
+           $('.seccion_body').hide();
+       });
+
+        $("#btn_genera").click(function(){
+           // alert("kj");
+           $("#input_subir").val(""); // Importante para que reonozco un error 2 veces seguidads
+           $('.seccion_body').hide();
+           $("#s_anio").val($("#anio").val());
+           $("#s_mes").val($("#mes").val());
+            $("#form2").submit(); // Paso 1
+        });
 
 
     })
 
+
+    function carga_crud(filename){
+
+     $('.gc-refresh').trigger('click');
+     $('.seccion_body').fadeIn("slow");
+     $(".myspin").hide(); // Carga Crud
+     $('.archivo_subido').text(filename);
+     $("#archivo_base").val(filename);
+     //$(".myspin").hide();
+
+ }
+
+ function valida_estructura(filename){
+       // show_checklist_2("subiendo",2);show_checklist_2("validando",1);show_checklist_2("cargando",0);
+       $.ajax({
+        url: 'cargas_planillas/valida_estructura/'+filename,
+        type: 'POST',
+        data: '',
+        async: false,
+        cache: false,
+        dataType:"json",
+        success: function (response) {
+            if(response.success==1){
+
+                  //show_checklist_2("subiendo",2);show_checklist_2("validando",2);show_checklist_2("cargando",2);
+
+                    carga_crud(filename); // Paso 3
+
+                }else{
+                    //$(".myalert").show();//investicar porq el hide lo elimina
+                    coleAlert("",response.data1);
+                    $(".fileUpload").show();
+                    //$("#chk-proceso").hide();
+                };
+            }
+        });
+   }
+
+   function upload_file(){
+        //alert("Listo PAra subir");
+        // $("#chk-proceso").show();   
+        
+        $(".myspin").show();
+        $("#form1").submit(); // Paso 1
+        //$(".myspin").hide();
+    }
+
     $("#form1").submit(function(evt){  
-        show_checklist("subiendo",1);
-        $(".fileUpload").hide();//.fadeOut(1000);
-        $("#input_subir").disabled=true;
+       // show_checklist_2("subiendo",1);show_checklist_2("validando",0);show_checklist_2("cargando",0);
+        //$(".fileUpload").hide();//.fadeOut(1000);
         evt.preventDefault();
-        var formData = new FormData($(this)[0]);
+
+        var formData = new FormData($(this)[0]);//kB
         $.ajax({
-            url: 'cargas_planillas/upload_ajax',
+            url: 'cargas_planillas/upload_file',
             type: 'POST',
             data: formData,
             async: false,
@@ -150,16 +238,21 @@
             contentType: false,
             enctype: 'multipart/form-data',
             processData: false,
+            dataType:"json",
             success: function (response) {
-                if(response==1){
-                   show_checklist("validando",1);
-               }else{
-                    //$(".fileUpload").show();//.fadeOut(1000);
-                    $("#error-upload").empty().append(response);
-                    $(".myalert").show();//.fadeOut(2000);
+                if(response.success==1){
+                    valida_estructura(response.data1); // Paso 2
+                }else{
+                    //$("#error-upload").empty().append(response.data1);
+                    //$(".myalert").show();//.hide(2000);//.fadeOut(2000);
+
+                    if(response.data1){
+                        coleAlert("",response.data1);
+                    }else{
+                        coleAlert("",response);  
+                    }
                     $(".fileUpload").show();
-                    $("#input_subir").disabled=false;
-                    //$(".fileUpload").show();
+
                 };
             }
         });
@@ -167,95 +260,21 @@
     });
 
 
-    function file_checking(){
-        $.ajax({
-            url: 'cargas_planillas/file_checking',
-            type: 'POST',
-            async: false,
-            cache: false,
-            contentType: false,
-            enctype: 'multipart/form-data',
-            processData: false,
-            success: function (response) {
-                if(response==1){
-
-                }else{
-
-                };
-            }
-        });
-        return false;
-    }
-
-    function data_loading(){
-
-    }
-
-    function  show_checklist(opcion,status){
+    function  show_checklist_2(opcion,status){
         $("#chk-proceso").show();
-        if(status==0){
-            $(".subiendo").removeClass();
-            $(".validando").removeClass();
-            $(".cargando").removeClass();
-
-            $(".subiendo").addClass("subiendo fa-li fa fa-square");
-            $(".validando").addClass("validando fa-li fa fa-square");
-            $(".cargando").addClass("cargando fa-li fa fa-square");
-            return;
-        }
-        
-        if(status==2){
-            $(".subiendo").removeClass();
-            $(".validando").removeClass();
-            $(".cargando").removeClass();
-
-            $(".subiendo").addClass("subiendo fa-li fa fa-check-square");
-            $(".validando").addClass("validando fa-li fa fa-check-square");
-            $(".cargando").addClass("cargando fa-li fa fa-check-square");  
-            return;   
-        }
-        
-        switch(opcion){
-            case "subiendo":
-            $(".subiendo").removeClass("fa-square")
-            $(".subiendo").addClass("fa-spinner fa-pulse")
-
-            $(".validando").removeClass("fa-spinner fa-pulse")
-            $(".validando").addClass("fa-square")
-
-            $(".cargando").removeClass("fa-spinner fa-pulse")
-            $(".cargando").addClass("fa-square")
-
-            break;
-            case "validando":
-            $(".subiendo").removeClass("fa-spinner fa-pulse")
-            $(".subiendo").addClass("fa-check-square")
-
-            $(".validando").removeClass("fa-square")
-            $(".validando").addClass("fa-spinner fa-pulse")
-
-
-            $(".cargando").removeClass("fa-spinner fa-pulse")
-            $(".cargando").addClass("fa-square")
-
-            break;
-            case "cargando":
-            $(".subiendo").removeClass("fa-spinner fa-pulse")
-            $(".subiendo").addClass("fa-check-square")
-
-            $(".validando").removeClass("fa-square")
-            $(".validando").addClass("fa-check-square")
-
-            $(".cargando").removeClass("fa-square")
-            $(".cargando").addClass("fa-spinner fa-pulse")
-        }
+        //valores=array(0=>" fa-close",1=>" fa-spinner fa-pulse",3=>" fa-check-square");
+        var valores=[];
+        valores[0]=" fa-li fa fa-square";
+        valores[1]=" fa-li fa fa-spinner fa-pulse";
+        valores[2]=" fa-li fa fa-check-square";
+        valores[3]=" fa-li fa fa-close";
+        $("."+opcion).removeClass("fa-li fa fa-square fa-spinner fa-pulse fa-close");
+        $("."+opcion).addClass(valores[status]);
+        return;
 
     }
 
-    function ready_to_upload(){
-        //alert("Listo PAra subir");
-        $("#form1").submit();
-    }
+
 
 
 </script>

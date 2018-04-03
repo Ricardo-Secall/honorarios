@@ -24,6 +24,12 @@ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica N
   font-size:14px;
   }
 
+.grocery-crud-table{
+    overflow: auto !important;
+    width: 100%;
+    display: block;
+}
+
 textarea{
   border-color: #e0e0e0;
   padding: 0.5em;
